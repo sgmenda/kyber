@@ -23,10 +23,11 @@ int pqcrystals_kyber512_avx2_enc_derand(uint8_t *ct, uint8_t *ss, const uint8_t 
 int pqcrystals_kyber512_avx2_enc(uint8_t *ct, uint8_t *ss, const uint8_t *pk);
 int pqcrystals_kyber512_avx2_dec(uint8_t *ss, const uint8_t *ct, const uint8_t *sk);
 
-#define pqcrystals_kyber768_SECRETKEYBYTES 2400
+#define pqcrystals_kyber768_KEYPAIRCOINBYTES 64
+// Secret keys are are seed
+#define pqcrystals_kyber768_SECRETKEYBYTES pqcrystals_kyber768_KEYPAIRCOINBYTES
 #define pqcrystals_kyber768_PUBLICKEYBYTES 1184
 #define pqcrystals_kyber768_CIPHERTEXTBYTES 1088
-#define pqcrystals_kyber768_KEYPAIRCOINBYTES 64
 #define pqcrystals_kyber768_ENCCOINBYTES 32
 #define pqcrystals_kyber768_BYTES 32
 
